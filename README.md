@@ -1,4 +1,10 @@
 # What to Watch
+- [Introduction](#introduction)
+- [Contributing](#contributing)
+- [Installation](#installation)
+- [Thanks](#thanks)
+- [Author](#author)
+- [License](#license)
 
 ## Introduction
 Don't know *what to watch* tonight? This app helps you to decide! It selects a completely random movie for you, and you decide whether you like it or not...
