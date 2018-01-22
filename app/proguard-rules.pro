@@ -68,6 +68,3 @@
 -keepattributes Signature
 # Retain declared checked exceptions for use by a Proxy instance.
 -keepattributes Exceptions
-
-# for DexGuard only
--keepresourcexmlelements manifest/application/meta-data@value=GlideModule
