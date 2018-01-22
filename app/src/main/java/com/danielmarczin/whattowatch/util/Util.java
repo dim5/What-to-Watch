@@ -17,11 +17,11 @@ public final class Util {
     private Util() {
     }
 
-    public static <T> T getRandomElement(List<T> list) {
+    public static <T> T getRandomElement(final List<T> list) {
         return list.get(random.nextInt(list.size()));
     }
 
-    public static <T> T getRandomElement(T[] array) {
+    public static <T> T getRandomElement(final T[] array) {
         return array[random.nextInt(array.length)];
     }
 
