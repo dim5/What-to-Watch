@@ -2,8 +2,9 @@
 
 ## Introduction
 Don't know *what to watch* tonight? This app helps you to decide! It selects a completely random movie for you, and you decide whether you like it or not...
-
+<p align="center">
 <img src="./screenshots/device-choose.png" width="300px" alt="screenshot-main"/> <img src="./screenshots/device-history.png" width="300px" alt="screenshot-history"/> <img src="./screenshots/device-detail.png" width="300px" alt="screenshot-detail"/> <img src="./screenshots/device-stats.png" width="300px" alt="screenshot-stats"/>
+</p>
 
 ## Contributing
 Submit a pull request and I'll check it out as soon as I can.
