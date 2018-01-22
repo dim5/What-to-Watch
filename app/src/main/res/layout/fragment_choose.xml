@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="6"
+    tools:context="com.danielmarczin.whattowatch.fragments.ChooseFragment">
+
+    <FrameLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="5">
+
+        <ImageView
+            android:id="@+id/ivPoster"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:contentDescription="@string/movie_poster"
+            android:scaleType="centerInside"
+            android:src="@drawable/placeholder"
+            tools:src="@drawable/placeholder" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center|end"
+            android:orientation="vertical">
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabHeart"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin_half"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_heart_white_24dp"
+                android:tint="@color/colorIcons"
+                app:backgroundTint="@color/colorDarkRed"
+                app:elevation="2dp" />
+
+            <android.support.design.widget.FloatingActionButton
+                android:id="@+id/fabFetchMovie"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_margin="@dimen/layout_margin_half"
+                android:clickable="true"
+                android:focusable="true"
+                android:src="@drawable/ic_thumb_down_white_24dp"
+                android:tint="@color/colorIcons"
+                app:backgroundTint="@color/colorAccent"
+                app:elevation="2dp" />
+        </LinearLayout>
+    </FrameLayout>
+
+    <TextView
+        android:id="@+id/tvTitle"
+        style="@style/TvDefaultColor"
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_gravity="center"
+        android:layout_marginEnd="@dimen/layout_margin_half"
+        android:layout_marginStart="@dimen/layout_margin_half"
+        android:layout_weight="1"
+        android:gravity="center"
+        android:paddingBottom="@dimen/layout_margin"
+        android:textAlignment="center"
+        android:textSize="24sp"
+        app:autoSizeMaxTextSize="42sp"
+        app:autoSizeTextType="uniform"
+        tools:text="Some title here" />
+    <!-- it actually  works api>14, see https://developer.android.com/guide/topics/ui/look-and-feel/autosizing-textview.html#setting-textview-autosize -->
+</LinearLayout>

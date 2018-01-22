@@ -1,0 +1,43 @@
+<resources>
+    <string name="app_name">What to Watch</string>
+    <string name="choose">Choose</string>
+    <string name="history">History</string>
+    <string name="stats">Stats</string>
+
+    <string name="title_activity_movie_detail">Movie Details</string>
+    <string name="movie_poster">Movie poster</string>
+    <string name="original_title">Original title:</string>
+    <string name="release_date">Release date:</string>
+    <string name="original_language">Original language:</string>
+    <string name="vote_average">Rating:</string>
+    <string name="overview">Overview:</string>
+    <string name="star">Star</string>
+    <string name="accepted_col">Accepted:</string>
+    <string name="details">Details</string>
+
+    <string name="tut_choose_primary">Get a movie recommendation</string>
+    <string name="tut_choose_secondary">Tap the heart if you\'re interested, else tap thumbs down.</string>
+    <string name="tut_history_primary">History</string>
+    <string name="tut_history_secondary">Tap here to check your past decisions.</string>
+    <string name="tut_stats_primary">Stats</string>
+    <string name="tut_stats_secondary">Tap here to check some statistics about the decisions you made.</string>
+    <string name="was_the_movie_accepted_or_not">Was the movie accepted or not.</string>
+    <string name="database_error">Database error occurred.</string>
+    <string name="decisions">Decisions</string>
+    <string name="accepted">Accepted</string>
+    <string name="rejected">Rejected</string>
+    <string name="network_error">Network error occurred.</string>
+
+    <string name="help">Help</string>
+    <string name="about">About</string>
+    <string name="ok">OK</string>
+    <string name="about_text">What to Watch \nCreated by Daniel Marczin (danielmarczin.com)</string>
+    <string name="help_text">
+        You can use this app to discover new movies.
+        \n\nPress the heart if the movie piqued your interest, otherwise press the thumb down if you\'d rather skip it.
+        \n\nYou can check your decisions in the history tab (press details to see the movie\'s details)
+        &amp; you can swipe to remove a movie if you don\'t want it anymore in your history.
+    </string>
+
+
+</resources>

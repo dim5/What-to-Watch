@@ -1,0 +1,126 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:layout_gravity="fill_vertical"
+    app:layout_behavior="@string/appbar_scrolling_view_behavior"
+    tools:context="com.danielmarczin.whattowatch.MovieDetailActivity"
+    tools:showIn="@layout/activity_movie_detail">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_margin="@dimen/layout_margin"
+        android:orientation="vertical">
+
+        <TextView
+            style="@style/Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="0dp"
+            android:text="@string/original_title" />
+
+        <TextView
+            android:id="@+id/tvOriginalTitle"
+            style="@style/TvDefaultColor"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:textIsSelectable="true"
+            android:textSize="34sp"
+            tools:text="Some title" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layout_margin_half"
+            android:layout_marginTop="@dimen/layout_margin_half"
+            android:orientation="horizontal">
+
+            <TextView
+                style="@style/Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="@string/release_date" />
+
+            <TextView
+                android:id="@+id/tvReleaseDate"
+                style="@style/Label.Content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                tools:text="1111-11-11" />
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="@dimen/layout_margin_half"
+            android:orientation="horizontal">
+
+            <TextView
+                android:id="@+id/labelOriginalLang"
+                style="@style/Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentStart="true"
+                android:text="@string/original_language" />
+
+            <TextView
+                android:id="@+id/tvOriginalLanguage"
+                style="@style/Label.Content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toEndOf="@id/labelOriginalLang"
+                tools:text="en" />
+
+            <TextView
+                style="@style/Label"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_gravity="end"
+                android:layout_toStartOf="@id/tvVoteAverage"
+                android:text="@string/vote_average"
+                tools:ignore="RelativeOverlap" />
+
+            <TextView
+                android:id="@+id/tvVoteAverage"
+                style="@style/Label.Content"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_toStartOf="@id/labelStar"
+                tools:text="6.9" />
+
+            <ImageView
+                android:id="@+id/labelStar"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentEnd="true"
+                android:layout_centerVertical="true"
+                android:contentDescription="@string/star"
+                android:scaleType="center"
+                app:srcCompat="@drawable/star_circle" />
+        </RelativeLayout>
+
+        <TextView
+            style="@style/Label"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="@string/overview"
+            android:textSize="18sp" />
+
+        <TextView
+            android:id="@+id/tvOverView"
+            style="@style/TvDefaultColor"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="100dp"
+            android:breakStrategy="high_quality"
+            android:textSize="22sp"
+            tools:text="Deadpool tells the origin story of former Special Forces operative turned mercenary Wade Wilson, who after being subjected to a rogue experiment that leaves him with accelerated healing powers, adopts the alter ego Deadpool. Armed with his new abilities and a dark, twisted sense of humor, Deadpool hunts down the man who nearly destroyed his life." />
+
+
+    </LinearLayout>
+
+</android.support.v4.widget.NestedScrollView>
