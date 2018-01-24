@@ -65,11 +65,6 @@ public class ChooseFragment extends Fragment {
 
         if (asyncMovieService == null)
             asyncMovieService = new RandomMovieServiceAsync();
-        if (lastFetchSubscription == null || lastFetchSubscription.isDisposed())
-            lastFetchSubscription = new SerialDisposable();
-        if (disposables == null || disposables.isDisposed())
-            disposables = new CompositeDisposable(lastFetchSubscription);
-
     }
 
     @Override
@@ -80,6 +75,17 @@ public class ChooseFragment extends Fragment {
         tvTitle = rootView.findViewById(R.id.tvTitle);
         ivPoster = rootView.findViewById(R.id.ivPoster);
 
+        if (lastFetchSubscription == null || lastFetchSubscription.isDisposed())
+            lastFetchSubscription = new SerialDisposable();
+        if (disposables == null || disposables.isDisposed())
+            disposables = new CompositeDisposable(lastFetchSubscription);
+
+        setFabListeners();
+
+        return rootView;
+    }
+
+    private void setFabListeners() {
         FloatingActionButton fabRejectMovie = rootView.findViewById(R.id.fabFetchMovie);
         fabRejectMovie.setOnClickListener(new View.OnClickListener() {
             @Override
@@ -108,8 +114,6 @@ public class ChooseFragment extends Fragment {
                 fetchNewMovie();
             }
         });
-
-        return rootView;
     }
 
     @Override
@@ -158,13 +162,12 @@ public class ChooseFragment extends Fragment {
     }
 
     private void fetchPoster() {
-        if (ivPoster != null)
-            GlideApp.with(this)
-                    .load(currentMovie.getPosterPath())
-                    .centerCrop()
-                    .transition(withCrossFade())
-                    .error(R.drawable.movie)
-                    .into(ivPoster);
+        GlideApp.with(this)
+                .load(currentMovie.getPosterPath())
+                .centerCrop()
+                .transition(withCrossFade())
+                .error(R.drawable.movie)
+                .into(ivPoster);
     }
 
     private void storeCurrentMovie() {
@@ -218,8 +221,8 @@ public class ChooseFragment extends Fragment {
     }
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
+    public void onDestroyView() {
+        super.onDestroyView();
         disposables.clear();
         disposables.dispose();
     }

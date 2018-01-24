@@ -50,9 +50,6 @@ public class StatsFragment extends Fragment {
 
         if (colorTemplate == null)
             colorTemplate = ColorTemplate.createColors(getResources(), new int[]{R.color.colorDeepGreen, R.color.colorDarkRed});
-
-        if (disposables == null || disposables.isDisposed())
-            disposables = new CompositeDisposable();
     }
 
     @Override
@@ -62,6 +59,9 @@ public class StatsFragment extends Fragment {
 
         chart = rootView.findViewById(R.id.chartStats);
         chart.setNoDataTextColor(getResources().getColor(R.color.textColorPrimary));
+
+        if (disposables == null || disposables.isDisposed())
+            disposables = new CompositeDisposable();
 
         loadDataToPie();
 
@@ -131,8 +131,8 @@ public class StatsFragment extends Fragment {
     }
 
     @Override
-    public void onDestroy() {
-        super.onDestroy();
+    public void onDestroyView() {
+        super.onDestroyView();
         disposables.clear();
         disposables.dispose();
     }

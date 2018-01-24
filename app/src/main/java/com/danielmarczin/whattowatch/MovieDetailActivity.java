@@ -143,12 +143,11 @@ public class MovieDetailActivity extends AppCompatActivity {
     }
 
     private void fetchPoster() {
-        if (ivPoster != null)
-            GlideApp.with(this)
-                    .load(movie.getPosterPath())
-                    .centerCrop()
-                    .error(R.drawable.movie)
-                    .into(ivPoster);
+        GlideApp.with(this)
+                .load(movie.getPosterPath())
+                .centerCrop()
+                .error(R.drawable.movie)
+                .into(ivPoster);
     }
 
     @Override
