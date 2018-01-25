@@ -1,4 +1,4 @@
-package com.danielmarczin.whattowatch;
+package com.danielmarczin.whattowatch.fragments;
 
 
 import android.app.AlertDialog;
@@ -10,6 +10,8 @@ import android.support.v4.app.DialogFragment;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.widget.TextView;
+
+import com.danielmarczin.whattowatch.R;
 
 /**
  * A dialog fragment with URLs enabled in the message box

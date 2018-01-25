@@ -10,6 +10,7 @@ import android.view.MenuInflater;
 import android.view.MenuItem;
 
 import com.danielmarczin.whattowatch.fragments.ChooseFragment;
+import com.danielmarczin.whattowatch.fragments.LinkDialogFragment;
 import com.danielmarczin.whattowatch.fragments.StatsFragment;
 import com.danielmarczin.whattowatch.fragments.history.HistoryFragment;
 import com.danielmarczin.whattowatch.util.ShowCaseQueue;
