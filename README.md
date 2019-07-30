@@ -29,7 +29,7 @@ Download the APK from [Releases](https://github.com/dim5/What-to-Watch/releases)
  - themoviedb.org
 
 ## Author
-Daniel Marczin ([danielmarczin.com](https://danielmarczin.com))
+Daniel Marczin 
 
 ## License 
 See [LICENSE.md](./LICENSE.md)
